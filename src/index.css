@@ -7,6 +7,8 @@
   color: rgba(247, 244, 244, 0.87);
   background-color: #242424;
 
+  /* touch-action: pan-y; */
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

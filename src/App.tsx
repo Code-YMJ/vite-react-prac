@@ -24,16 +24,6 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-       
-        {/* <Accordion className='sss'>
-          <AccordionItem  header="test 1">
-          <button onClick={() => setCount1((count1) => count1 + 1)}>
-          MJ is {count1}
-        </button>
-          </AccordionItem>
-        </Accordion>
-        <Accordion_ items={items} allowMultipleOpen={true} />
-      <Accordion_ items={items} allowMultipleOpen={false} /> */}
       </div>
       <Accordion title='heo' key={'hello'}>
         <p className='dox2'>
