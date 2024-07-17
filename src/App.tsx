@@ -2,9 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+// import {Accordion, AccordionItem} from "@szhsin/react-accordion"
+import Accordion from "./components/Accordion";
+import Button from './components/Button';
 
 function App() {
   const [count, setCount] = useState(0)
+  // const [count1, setCount1] = useState(0)
+  // const items = [
+  //   { title: 'Item 1', content: <div>Content 1</div>, style: { width: '300px', backgroundColor: '#646cff' ,  margin: "0 auto"} },
+  //   { title: 'Item 2', content: <div>Content 2</div>, style: { width: '400px', backgroundColor: '#ffe1e1' ,  margin: "0 auto"} },
+  //   { title: 'Item 3', content: <div>Content 3</div>, style: { width: '500px', backgroundColor: '#d1d1d1' ,  margin: "0 auto"} },
+  // ];
 
   return (
     <>
@@ -15,7 +24,25 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+       
+        {/* <Accordion className='sss'>
+          <AccordionItem  header="test 1">
+          <button onClick={() => setCount1((count1) => count1 + 1)}>
+          MJ is {count1}
+        </button>
+          </AccordionItem>
+        </Accordion>
+        <Accordion_ items={items} allowMultipleOpen={true} />
+      <Accordion_ items={items} allowMultipleOpen={false} /> */}
       </div>
+      <Accordion title='heo' key={'hello'}>
+        <p className='dox2'>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+          <Button onClick={() =>  setCount((count) => count + 1)} >
+            TEST Count {count}
+          </Button>
+        </Accordion>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
