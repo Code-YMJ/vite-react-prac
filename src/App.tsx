@@ -5,8 +5,10 @@ import './App.css'
 // import {Accordion, AccordionItem} from "@szhsin/react-accordion"
 import Accordion from "./components/Accordion";
 import Button from './components/Button';
-
+import RSVPPopup from './layout/RSVPPopup';
 function App() {
+
+  const [isRSVPOpen, setRSVPOpen] = useState(true);
   const [count, setCount] = useState(0)
   // const [count1, setCount1] = useState(0)
   // const items = [
@@ -14,9 +16,12 @@ function App() {
   //   { title: 'Item 2', content: <div>Content 2</div>, style: { width: '400px', backgroundColor: '#ffe1e1' ,  margin: "0 auto"} },
   //   { title: 'Item 3', content: <div>Content 3</div>, style: { width: '500px', backgroundColor: '#d1d1d1' ,  margin: "0 auto"} },
   // ];
-
+  const handleRSVPClose = () => {
+    setRSVPOpen(false); // 팝업을 닫는 상태 업데이트
+  };
   return (
     <>
+    <RSVPPopup isOpen= {isRSVPOpen} onClose={handleRSVPClose} />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
